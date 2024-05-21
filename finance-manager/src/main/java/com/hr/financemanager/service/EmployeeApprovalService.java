@@ -53,7 +53,7 @@ public class EmployeeApprovalService {
        return fromEmployeeInfo(employeeInfo);
     }
 
-    private EmployeeInfo saveEmployeeInfo(EmployeeInfoRequest employeeInfoRequest) {
+    public EmployeeInfo saveEmployeeInfo(EmployeeInfoRequest employeeInfoRequest) {
         List<BankDetails> bankDetailsList = new ArrayList<>();
         List<EducationInformation> educationInformationList = new ArrayList<>();
         List<NextOfKinInfo> nextOfKinInfoList = new ArrayList<>();
