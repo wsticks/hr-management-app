@@ -7,10 +7,7 @@ import jakarta.mail.internet.InternetAddress;
 import jakarta.mail.internet.MimeMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
 
 import java.util.Properties;
@@ -31,24 +28,9 @@ public class EmailServiceImpl implements EmailService {
     @Value("${email.subject}")
     private String emailSubject;
 
-    @Autowired
-    private JavaMailSender javaMailSender;
 
-  @Override
+    @Override
   public void sendMail(String to, String[] cc, String subject, String body) {
-    //                  MimeMessage mimeMessage = javaMailSender.createMimeMessage();
-    //                  MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage,
-    // true);
-    //                  mimeMessageHelper.setFrom(fromEmail);
-    //                  mimeMessageHelper.setTo(to);
-    //                  mimeMessageHelper.setCc(cc);
-    //                  mimeMessageHelper.setSubject(subject);
-    //                  mimeMessageHelper.setText(body);
-    //                  LOGGER.info("email information to be sent {}" , mimeMessageHelper);
-    //                  javaMailSender.send(mimeMessage);
-    //                  return "mail send";
-
-
     Properties props = new Properties();
     props.put("mail.smtp.auth", "true");
     props.put("mail.smtp.starttls.enable", "true");

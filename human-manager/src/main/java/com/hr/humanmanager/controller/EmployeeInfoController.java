@@ -5,7 +5,7 @@ import com.hr.humanmanager.service.EmployeeInfoService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("employee-info")
+@RequestMapping("employeeinfo")
 public class EmployeeInfoController {
 
 
@@ -18,12 +18,6 @@ public class EmployeeInfoController {
     @PostMapping("/send")
     public String sendEmployeeInfo(@RequestBody EmployeeInfoRequest employeeInfoRequest) {
         return employeeInfoService.sendEmployeeInfo(employeeInfoRequest);
-    }
-
-    @GetMapping("/get")
-    public String sendEmployeeInfo(String message) {
-        message = "Welcome ";
-        return message;
     }
 
 }

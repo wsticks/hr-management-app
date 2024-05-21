@@ -15,49 +15,6 @@ import java.util.Map;
 
 @Configuration
 public class KafkaConfig {
-//
-//    // Function to establish a connection
-//    // between Spring application
-//    // and Kafka server
-//    @Bean
-//    public ConsumerFactory<String, EmployeeInfoRequest>
-//    studentConsumer()
-//    {
-//
-//        Map<String, Object> map
-//                = new HashMap<>();
-//
-//        map.put(ConsumerConfig
-//                        .BOOTSTRAP_SERVERS_CONFIG,
-//                "127.0.0.1:9092");
-//
-//        map.put(ConsumerConfig
-//                        .GROUP_ID_CONFIG,
-//                "id");
-//        map.put(ConsumerConfig
-//                        .KEY_DESERIALIZER_CLASS_CONFIG,
-//                StringDeserializer.class);
-//        map.put(ConsumerConfig
-//                        .VALUE_DESERIALIZER_CLASS_CONFIG,
-//                JsonDeserializer.class);
-//
-//        return new DefaultKafkaConsumerFactory<>(
-//                map, new StringDeserializer(),
-//                new JsonDeserializer<>(EmployeeInfoRequest.class));
-//    }
-//
-//    @Bean
-//    public ConcurrentKafkaListenerContainerFactory<String,
-//            EmployeeInfoRequest>
-//    employeeListener()
-//    {
-//        ConcurrentKafkaListenerContainerFactory<String,
-//                EmployeeInfoRequest>
-//                factory
-//                = new ConcurrentKafkaListenerContainerFactory<>();
-//        factory.setConsumerFactory(studentConsumer());
-//        return factory;
-//    }
 
     @Bean
     public ConsumerFactory<String, EmployeeInfoRequest> consumerFactory(){

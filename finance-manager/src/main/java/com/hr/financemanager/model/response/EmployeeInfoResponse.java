@@ -1,8 +1,5 @@
 package com.hr.financemanager.model.response;
-
-import com.hr.financemanager.model.entity.BankDetails;
 import com.hr.financemanager.model.entity.EmployeeInfo;
-import lombok.Data;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;
