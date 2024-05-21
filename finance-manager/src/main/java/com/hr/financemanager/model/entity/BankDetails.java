@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.sql.Timestamp;
 
@@ -22,7 +24,9 @@ public class BankDetails
         private String bankName;
         private String employeeBankAccountNumber;
         private String employeeAccountName;
+        @CreationTimestamp
         private Timestamp createdAt;
+        @UpdateTimestamp
         private Timestamp updatedAt;
 
 }

@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.sql.Timestamp;
 
@@ -23,6 +25,8 @@ public class NextOfKinInfo {
         String address;
         String phoneNumber;
         String relationship;
-        Timestamp createdAt;
-        Timestamp updatedAt;
+        @CreationTimestamp
+        private Timestamp createdAt;
+        @UpdateTimestamp
+        private Timestamp updatedAt;
 }

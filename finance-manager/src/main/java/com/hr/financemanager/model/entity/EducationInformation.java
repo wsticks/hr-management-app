@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.sql.Timestamp;
 
@@ -22,6 +24,8 @@ public class EducationInformation {
     private String institutionName;
     private String courseOfStudy;
     private  String grade;
-    private  Timestamp createdAt;
+    @CreationTimestamp
+    private Timestamp createdAt;
+    @UpdateTimestamp
     private Timestamp updatedAt;
 }

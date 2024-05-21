@@ -5,6 +5,8 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.sql.Timestamp;
 import java.util.List;
@@ -40,7 +42,9 @@ public class EmployeeInfo {
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "emp_id",referencedColumnName = "id")
     private List<ChildrenDetails> childrenDetails;
+    @CreationTimestamp
     private Timestamp createdAt;
+    @UpdateTimestamp
     private Timestamp updatedAt;
 
 }

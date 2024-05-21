@@ -5,6 +5,7 @@
 	<modules>
 		<module>finance-manager</module>
 		<module>human-manager</module>
+		<module>config-app</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
